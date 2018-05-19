@@ -2,6 +2,8 @@
 
 [<AutoOpen>]
 module Types = 
+    open System
+
     type Move = int
     let NoMovement = 0
 
@@ -99,3 +101,17 @@ module Types =
         | DirE = 1
         | DirS = 8
         | DirW = -1
+        
+    type DirectionModifier = 
+        | DirN = -1
+        | DirE = 1
+        | DirS = 1
+        | DirW = -1
+
+    let DirectionToModifier dir = 
+        match dir with
+        | Direction.DirN -> DirectionModifier.DirN
+        | Direction.DirW -> DirectionModifier.DirW
+        | Direction.DirE -> DirectionModifier.DirE
+        | Direction.DirS -> DirectionModifier.DirS
+        | _ -> raise (ArgumentOutOfRangeException("Not a valid Direction"))
