@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Types.fs" />
+    <Compile Include="Convert.fs" />
+    <Compile Include="Position.fs" />
+    <Compile Include="Board.fs" />
+    <Compile Include="Move.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 
